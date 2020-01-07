@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8"/>
+        <link rel="stylesheet" href="lampada.css">
+        <title>Lámpada</title>
+
+        <script>
+            let isBroken = false
+
+            function mudaLampada(tipo){
+                if(!isBroken){
+                    document.getElementById("luz").src = `_img/${tipo}.jpg`
+                    if(tipo == 'lampada-quebrada'){
+                        isBroken = true
+                    }
+                }
+            }
+        </script>
+    </head>
+    <body class="container">
+        <div class="box">
+            <h1> Acenda a Lámpada</h1>
+            <img id="luz" src="_img/lampada-apagada.jpg" onmousemove="mudaLampada('lampada-acesa')" onmouseout="mudaLampada('lampada-apagada')" onclick="mudaLampada('lampada-quebrada')"/>
+        </div>
+    </body>
+</html>
