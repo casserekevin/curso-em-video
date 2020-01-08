@@ -34,8 +34,8 @@ header#cabecalho {
     display: flex;
 
     border-bottom: 1px #606060 solid;
-    height: 150px;
-    background: url("../_img/glass-logo-peq.jpg") no-repeat 0px 100px;    
+    height: 200px;
+    background: url("../_img/glass-logo-peq.jpg") no-repeat 0px 150px;    
 }
 
 /* LEFT----------------------------------------------------------------------- */
