@@ -44,25 +44,43 @@
                         </hgroup>
                     </header>
 
-                    <form method="post" id="fContato" action="mailto:contato@cursoemvideo.com">
+                    <form method="post" id="fContato" action="mailto:contato@cursoemvideo.com" oninput="calc_total()">
                         <fieldset id="usuario">
                             <legend>Identificação do Usuário</legend>
 
-                            <p><label for="cNome">Nome:</label> <input type="text" name="tNome" id="cNome" size="20" maxlength="30" placeholder="Nome Completo"/></p>
-                            <p><label for="cSenha">Senha:</label> <input type="password" name="tSenha" id="cSenha" size="8" maxlength="8" placeholder="8 dígitos"/></p>
-                            <p><label for="cMail">E-mail:</label> <input type="email" name="tMail" id="cMail" size="20" maxlength="40"/></p>
+                            <p>
+                                <label for="cNome">Nome:</label> 
+                                <input type="text" name="tNome" id="cNome" size="20" maxlength="30" placeholder="Nome Completo"/>
+                            </p>
+                            <p>
+                                <label for="cSenha">Senha:</label> 
+                                <input type="password" name="tSenha" id="cSenha" size="8" maxlength="8" placeholder="8 dígitos"/>
+                            </p>
+                            <p>
+                                <label for="cMail">E-mail:</label> 
+                                <input type="email" name="tMail" id="cMail" size="20" maxlength="40"/>
+                            </p>
                             <fieldset id="sexo">
                                 <legend>Sexo:</legend>
                                 <input type="radio" name="tSexo" id="cMasc" checked/> <label for="cMasc">Masculino</label>
                                 <input type="radio" name="tSexo" id="cFem"/> <label for="cFem">Feminino</label>
                             </fieldset>
-                            <p><label for="cNasc">Data de Nascimento:</label> <input type="date" name="tNasc" id="cNasc"/></p>
+                            <p>
+                                <label for="cNasc">Data de Nascimento:</label> 
+                                <input type="date" name="tNasc" id="cNasc"/>
+                            </p>
                         </fieldset>
     
-                        <fieldset id="endereço">
+                        <fieldset id="endereco">
                             <legend>Endereço do Usuário</legend>
-                                <p><label for="cRua">Logradouro:</label> <input type="text" name="tRua" id="cRua" size="13" maxlength="80" placeholder="Rua, Av., Trav. ..."/></p>
-                                <p><label for="cNum">Número:</label> <input type="number" name="tNum" id="cNum" min="0" max="99999"/></p>
+                                <p>
+                                    <label for="cRua">Logradouro:</label> 
+                                    <input type="text" name="tRua" id="cRua" size="13" maxlength="80" placeholder="Rua, Av., Trav. ..."/>
+                                </p>
+                                <p>
+                                    <label for="cNum">Número:</label> 
+                                    <input type="number" name="tNum" id="cNum" min="0" max="99999"/>
+                                </p>
                                 <p>
                                     <label for="cEst">Estado:</label>
                                     <select name="tEst" id="cEst">
@@ -99,20 +117,31 @@
                                 </p>
                                 <p>
                                     <label for="cMsg">Mensagem:</labe>
-                                    <textarea name="tMsg" id="cMsg" cols="45" rows="5" placeholder="Deixe aqui sua mensagem"></textarea>
+                                    <textarea name="tMsg" id="cMsg" cols="35" rows="5" placeholder="Deixe aqui sua mensagem"></textarea>
                                 </p>
                         </fieldset>
     
                         <fieldset id="pedido">
                             <legend>Quero um Google Glass</legend>
-                                <p><label for="cPed">Gostaria de adquirir um Google Glass quando disponível</label></p>
-                                <p><label for="cCor">Cor:</label></p>
-                                <p><label for="cQtd">Quantidade:</label></p>
-                                <p><label for="cTot">Preço Total: R$</label></p>
+                                <p>
+                                    <input type="checkbox" name="tPed" id="cPed" checked/>
+                                    <label for="cPed">Gostaria de adquirir um Google Glass quando disponível</label>
+                                </p>
+                                <p>
+                                    <label for="cCor">Cor:</label>
+                                    <input type="color" name="tCor" id="cCor" value="#FFFFFF">
+                                </p>
+                                <p>
+                                    <label for="cQtd">Quantidade:</label>
+                                    <input type="number" name="tQtd" id="cQtd" min="0" max="5" value="0">
+                                </p>
+                                <p>
+                                    <label for="cTot">Preço Total: R$</label>
+                                    <input type="text" name="tTot" id="cTot" placeholder="Total a pagar" readonly>
+                                </p>
                         </fieldset>
-    
-    
-                        [BOTÃO ENVIAR]
+                        
+                        <input type="image" name="tEnviar" src="_img/botao-enviar.png" alt="">
                     </form>
             
                 <article/>
@@ -124,5 +153,6 @@
             </footer>
         </div>
     <script src="_js/main.js"></script>
+    <script src="_js/fale-conosco.js"></script>
     </body>
 </html>
